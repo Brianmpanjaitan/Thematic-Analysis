@@ -25,9 +25,7 @@ project_name_list = ['TRANSITIONS', 'ELPATS', 'SEL']
 def download_if_not_exists(resource_name):
     try:
         nltk.data.find(f'tokenizers/{resource_name}')
-        print(f"{resource_name} is already downloaded.")
     except LookupError:
-        print(f"Downloading {resource_name}...")
         nltk.download(resource_name, quiet=True)
 
 def decideTheme(user_input, theme_list):
